@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="44334b07-4546-4855-9579-0fe01ebd6fee" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/TestUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/TestUtilTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/TestUtilTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/TestUtilTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +61,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.TestUtilTest.test1">
+  <component name="RunManager" selected="JUnit.TestUtilTest.test2">
     <configuration name="TestUtilTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="likelion-wise-saying-tdd.test" />
       <extension name="coverage">
@@ -95,8 +93,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TestUtilTest.test2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="likelion-wise-saying-tdd.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.TestUtilTest" />
+      <option name="METHOD_NAME" value="test2" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TestUtilTest.test2" />
         <item itemvalue="JUnit.TestUtilTest.test1" />
         <item itemvalue="JUnit.TestUtilTest" />
       </list>
