@@ -10,7 +10,10 @@ public class App {
     }
 
     public void run() {
-        System.out.print("== 명언 앱 ==");
+        System.out.println("== 명언 앱 ==");
+
+        System.out.print("명언 : ");
+        System.out.print("작가 : ");
     }
 
 
