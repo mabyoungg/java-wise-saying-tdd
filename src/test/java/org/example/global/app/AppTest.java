@@ -11,7 +11,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class AppTest {
     private static String run(String cmd) {
-        Scanner scanner = TestUtil.genScanner(cmd.stripIndent().trim());
+        Scanner scanner = TestUtil.genScanner(cmd.stripIndent().trim() + "\n종료");
 
         ByteArrayOutputStream byteArrayOutputStream = TestUtil.setOutToByteArray();
 
@@ -26,9 +26,7 @@ public class AppTest {
     @Test
     @DisplayName("프로그램 시작시 명언앱 출력")
     void test1() {
-        String out = run("""
-                종료
-                """);
+        String out = run("");
 
         assertThat(out).contains("== 명언 앱 ==");
     }
@@ -37,9 +35,7 @@ public class AppTest {
     @Test
     @DisplayName("종료 입력시 프로그램 종료")
     void test2() {
-        String out = run("""
-                종료
-                """);
+        String out = run("");
     }
 
     @Test
@@ -49,7 +45,6 @@ public class AppTest {
                 등록
                 나는 신이다
                 홍길동
-                종료
                 """);
 
         assertThat(out)
@@ -59,19 +54,22 @@ public class AppTest {
     }
 
     @Test
-    @DisplayName("등록 번호 증가")
+    @DisplayName("등록 번호 증가, 1개")
     void test4() {
         String out = run("""
                 등록
                 나는 신이다
                 홍길동
-                종료
                 """);
 
         assertThat(out)
                 .contains("1번 명언이 등록되었습니다.")
                 .doesNotContain("2번 명언이 등록되었습니다.");
+    }
 
+    @Test
+    @DisplayName("등록 번호 증가, 2개")
+    void test5() {
         String out2 = run("""
                 등록
                 나는 신이다
@@ -79,7 +77,6 @@ public class AppTest {
                 등록
                 나는 신이다
                 홍길동
-                종료
                 """);
 
         assertThat(out2)
@@ -87,6 +84,7 @@ public class AppTest {
                 .contains("2번 명언이 등록되었습니다.")
                 .doesNotContain("3번 명언이 등록되었습니다.");
     }
+
 
 //    @Test
 //    @DisplayName("종료를 입력하면 꺼진다.")
