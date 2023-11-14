@@ -85,6 +85,26 @@ public class AppTest {
                 .doesNotContain("3번 명언이 등록되었습니다.");
     }
 
+    @Test
+    @DisplayName("목록")
+    void test6() {
+        String out2 = run("""
+                등록
+                나는 신이다.
+                홍길동
+                등록
+                나는 신이 아니다.
+                홍길순
+                목록
+                """);
+
+        assertThat(out2)
+                .contains("번호 / 작가 / 명언")
+                .contains("----------------------")
+                .contains("2 / 홍길순 / 나는 신이 아니다.")
+                .contains("1 / 홍길동 / 나는 신이다.");
+    }
+
 
 //    @Test
 //    @DisplayName("종료를 입력하면 꺼진다.")

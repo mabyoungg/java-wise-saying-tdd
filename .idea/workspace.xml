@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="44334b07-4546-4855-9579-0fe01ebd6fee" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/example/global/app/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/global/app/AppTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -83,22 +84,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AppTest.test1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="likelion-wise-saying-tdd.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.global.app.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example.global.app" />
-      <option name="MAIN_CLASS_NAME" value="org.example.global.app.AppTest" />
-      <option name="METHOD_NAME" value="test1" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="AppTest.test3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="likelion-wise-saying-tdd.test" />
       <extension name="coverage">
@@ -147,13 +132,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="AppTest.test6" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="likelion-wise-saying-tdd.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.global.app.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example.global.app" />
+      <option name="MAIN_CLASS_NAME" value="org.example.global.app.AppTest" />
+      <option name="METHOD_NAME" value="test6" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.AppTest" />
+        <item itemvalue="JUnit.AppTest.test6" />
         <item itemvalue="JUnit.AppTest.test5" />
         <item itemvalue="JUnit.AppTest.test4" />
         <item itemvalue="JUnit.AppTest.test3" />
-        <item itemvalue="JUnit.AppTest.test1" />
       </list>
     </recent_temporary>
   </component>
@@ -171,7 +172,7 @@
       <workItem from="1698912612343" duration="258000" />
       <workItem from="1698912952469" duration="651000" />
       <workItem from="1699514872885" duration="973000" />
-      <workItem from="1699966528537" duration="4629000" />
+      <workItem from="1699966528537" duration="5272000" />
     </task>
     <servers />
   </component>
