@@ -22,35 +22,38 @@ public class App {
         while (true) {
             String cmd = scanner.nextLine().trim();
 
-            if (cmd.equals("등록")) {
-                System.out.print("명언 : ");
-                String content = scanner.nextLine().trim();
-                System.out.print("작가 : ");
-                String author = scanner.nextLine().trim();
+            switch (cmd) {
+                case "등록" -> {
+                    System.out.print("명언 : ");
+                    String content = scanner.nextLine().trim();
+                    System.out.print("작가 : ");
+                    String author = scanner.nextLine().trim();
 
-                long id = ++lastWiseSayingId;
+                    long id = ++lastWiseSayingId;
 
-                WiseSaying wiseSaying = new WiseSaying(id, author, content);
-                wiseSayings.add(wiseSaying);
+                    WiseSaying wiseSaying = new WiseSaying(id, author, content);
+                    wiseSayings.add(wiseSaying);
 
-                System.out.println("%d번 명언이 등록되었습니다.".formatted(id));
-            } else if (cmd.equals("목록")) {
-                System.out.println("번호 / 작가 / 명언");
-                System.out.println("----------------------");
+                    System.out.println("%d번 명언이 등록되었습니다.".formatted(id));
+                }
+                case "목록" -> {
+                    System.out.println("번호 / 작가 / 명언");
+                    System.out.println("----------------------");
 
-                wiseSayings
-                        .reversed()
-                        .forEach(wiseSaying -> System.out.println(
-                                        "%d / %s / %s".formatted(
-                                                wiseSaying.getId(),
-                                                wiseSaying.getAuthor(),
-                                                wiseSaying.getContent()
-                                        )
-                                )
-                        );
-
-            } else if (cmd.equals("종료")) {
-                return;
+                    wiseSayings
+                            .reversed()
+                            .forEach(wiseSaying -> System.out.println(
+                                            "%d / %s / %s".formatted(
+                                                    wiseSaying.getId(),
+                                                    wiseSaying.getAuthor(),
+                                                    wiseSaying.getContent()
+                                            )
+                                    )
+                            );
+                }
+                case "종료" -> {
+                    return;
+                }
             }
         }
 
