@@ -1,5 +1,9 @@
 package org.example.global.app;
 
+import org.example.domain.wisesaing.wisesaying.entity.WiseSaying;
+
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class App {
@@ -12,11 +16,12 @@ public class App {
     public void run() {
         System.out.println("== 명언 앱 ==");
 
+        List<WiseSaying> wiseSayings = new ArrayList<>();
         long lastWiseSayingId = 0;
 
         while (true) {
             String cmd = scanner.nextLine().trim();
-            
+
             if (cmd.equals("등록")) {
                 System.out.print("명언 : ");
                 String content = scanner.nextLine().trim();
@@ -25,12 +30,25 @@ public class App {
 
                 long id = ++lastWiseSayingId;
 
+                WiseSaying wiseSaying = new WiseSaying(id, author, content);
+                wiseSayings.add(wiseSaying);
+
                 System.out.println("%d번 명언이 등록되었습니다.".formatted(id));
             } else if (cmd.equals("목록")) {
                 System.out.println("번호 / 작가 / 명언");
                 System.out.println("----------------------");
-                System.out.println("2 / 홍길순 / 나는 신이 아니다.");
-                System.out.println("1 / 홍길동 / 나는 신이다.");
+
+                wiseSayings
+                        .reversed()
+                        .forEach(wiseSaying -> System.out.println(
+                                        "%d / %s / %s".formatted(
+                                                wiseSaying.getId(),
+                                                wiseSaying.getAuthor(),
+                                                wiseSaying.getContent()
+                                        )
+                                )
+                        );
+
             } else if (cmd.equals("종료")) {
                 return;
             }
