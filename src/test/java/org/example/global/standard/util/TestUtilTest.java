@@ -13,10 +13,10 @@ public class TestUtilTest {
     @DisplayName("genScanner 테스트")
     void test1() {
         Scanner scanner = TestUtil.genScanner("""
-        등록
-        내용
-        작가
-        """.stripIndent());
+                등록
+                내용
+                작가
+                """.stripIndent());
         String cmd = scanner.nextLine();
         String content = scanner.nextLine();
         String author = scanner.nextLine();

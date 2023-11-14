@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="44334b07-4546-4855-9579-0fe01ebd6fee" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/global/app/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/global/app/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/example/global/app/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/global/app/AppTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -152,8 +151,8 @@
       <list>
         <item itemvalue="JUnit.AppTest" />
         <item itemvalue="JUnit.AppTest.test3" />
-        <item itemvalue="JUnit.AppTest.test2" />
         <item itemvalue="JUnit.AppTest.test1" />
+        <item itemvalue="JUnit.AppTest.test2" />
         <item itemvalue="JUnit.AppTest.test4" />
       </list>
     </recent_temporary>
@@ -172,7 +171,7 @@
       <workItem from="1698912612343" duration="258000" />
       <workItem from="1698912952469" duration="651000" />
       <workItem from="1699514872885" duration="973000" />
-      <workItem from="1699966528537" duration="2065000" />
+      <workItem from="1699966528537" duration="2408000" />
     </task>
     <servers />
   </component>
