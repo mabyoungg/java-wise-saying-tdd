@@ -5,6 +5,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.io.ByteArrayOutputStream;
+import java.util.Scanner;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -12,9 +13,13 @@ public class AppTest {
     @Test
     @DisplayName("프로그램 시작시 명언앱 출력")
     void test1() {
+        Scanner scanner = TestUtil.genScanner("""
+                종료
+                """.stripIndent());
+
         ByteArrayOutputStream byteArrayOutputStream = TestUtil.setOutToByteArray();
 
-        new App().run();
+        new App(scanner).run();
 
         String out = byteArrayOutputStream.toString().trim();
         TestUtil.clearSetOutToByteArray(byteArrayOutputStream);
@@ -22,6 +27,21 @@ public class AppTest {
         assertThat(out).contains("== 명언 앱 ==");
     }
 
+
+    @Test
+    @DisplayName("종료 입력시 프로그램 종료")
+    void test2() {
+        Scanner scanner = TestUtil.genScanner("""
+                종료
+                """.stripIndent());
+
+        ByteArrayOutputStream byteArrayOutputStream = TestUtil.setOutToByteArray();
+
+        new App(scanner).run();
+
+        String out = byteArrayOutputStream.toString().trim();
+        TestUtil.clearSetOutToByteArray(byteArrayOutputStream);
+    }
 
 //    @Test
 //    @DisplayName("종료를 입력하면 꺼진다.")
