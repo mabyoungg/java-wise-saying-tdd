@@ -12,8 +12,25 @@ public class App {
     public void run() {
         System.out.println("== 명언 앱 ==");
 
-        System.out.print("명언 : ");
-        System.out.print("작가 : ");
+        long lastWiseSayingId = 0;
+
+        while (true) {
+            String cmd = scanner.nextLine().trim();
+            
+            if (cmd.equals("등록")) {
+                System.out.print("명언 : ");
+                String content = scanner.nextLine().trim();
+                System.out.print("작가 : ");
+                String author = scanner.nextLine().trim();
+
+                long id = ++lastWiseSayingId;
+
+                System.out.println("%d번 명언이 등록되었습니다.".formatted(id));
+            } else if (cmd.equals("종료")) {
+                return;
+            }
+        }
+
     }
 
 

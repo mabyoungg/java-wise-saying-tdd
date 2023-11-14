@@ -54,7 +54,38 @@ public class AppTest {
 
         assertThat(out)
                 .contains("명언 :")
-                .contains("작가 :");
+                .contains("작가 :")
+                .contains("1번 명언이 등록되었습니다.");
+    }
+
+    @Test
+    @DisplayName("등록 번호 증가")
+    void test4() {
+        String out = run("""
+                등록
+                나는 신이다
+                홍길동
+                종료
+                """);
+
+        assertThat(out)
+                .contains("1번 명언이 등록되었습니다.")
+                .doesNotContain("2번 명언이 등록되었습니다.");
+
+        String out2 = run("""
+                등록
+                나는 신이다
+                홍길동
+                등록
+                나는 신이다
+                홍길동
+                종료
+                """);
+
+        assertThat(out2)
+                .contains("1번 명언이 등록되었습니다.")
+                .contains("2번 명언이 등록되었습니다.")
+                .doesNotContain("3번 명언이 등록되었습니다.");
     }
 
 //    @Test
